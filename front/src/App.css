@@ -38,6 +38,7 @@
 .barraNav .barraNav_links a:hover {
     background-color: #fff;
     color: #005640 !important;
+    cursor: pointer;
 }
 
 .barraNav .logo img {
