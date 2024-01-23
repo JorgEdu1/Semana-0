@@ -60,7 +60,7 @@ const Frete = () => {
             </div>
 
             <div className="map-frete">
-                <h1>Nossa Localizacao: </h1>
+                <h1>Nossa Localização: </h1>
                 <iframe
                     className='map'
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.53302292835!2d-39.33046632439333!3d-7.2257708983852895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a1825d4a8524e3%3A0xf5f371c3331bb8dc!2zQ2FqdcOtbmEgU8OjbyBHZXJhbGRv!5e0!3m2!1spt-BR!2sbr!4v1706029366339!5m2!1spt-BR!2sbr"
