@@ -1,9 +1,21 @@
 
 
+/*Carrosel*/
+
+#carouselExampleControls {
+    width: 70%;
+}
+
+.carousel-div {
+    background-color: #005640;
+    display: flex;
+    justify-content: center;
+}
+
 /* FOOTER */
 
 .footer-div {
-    background-color: #005A38;
+    background-color: #007245;
     color: #fff;
     padding-top: 30px;
     padding-bottom: 100px;
