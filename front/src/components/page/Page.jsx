@@ -1,9 +1,10 @@
 import React from 'react'
+import Footer from '../Footer'
 
 const Page = () => {
   return (
     <div>
-        <button type="button" class="btn btn-dark">Dark</button>
+        <Footer/>
     </div>
   )
 }
