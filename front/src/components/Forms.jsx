@@ -22,13 +22,10 @@ const ContactForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // Aqui você pode enviar os dados para o seu backend
+    e.preventDefault();//evita que a pagina seja recarregada
     try {
       const response = await axios.post(url, formData);
 
-      // Lógica de tratamento da resposta do backend, se necessário
       alert('Email enviado com sucesso!')
     } catch (error) {
       alert('Erro ao enviar email!')

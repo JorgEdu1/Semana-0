@@ -1,12 +1,12 @@
 import axios from 'axios';
-const url = 'https://sandbox.melhorenvio.com.br/api/v2/me/shipment/calculate'
+const url = 'https://sandbox.melhorenvio.com.br/api/v2/me/shipment/calculate'//url da api do melhorenvio
 
 export class ShipController {
     static calculateShip(req, res) {
 
-        const cep = req.body.postal_code;
-        console.log(cep);
+        const cep = req.body.postal_code;//pegando o cep do corpo da requisição
 
+        //fazendo a requisição para a api do melhorenvio, precisa passar o cep de origem e o cep de destino e o token de autorização mais alguns headers
         axios.post(url, {
             "from": {
                 "postal_code": "63022115"
@@ -22,10 +22,10 @@ export class ShipController {
                 'user-agent': 'Aplicacao teste'
             }
         }).then((response) => {
-            res.send(response.data);
+            res.send(response.data);//enviando a resposta da api para o front
         }
         ).catch((error) => {
-            res.send(error);
+            res.send(error);//enviando o erro para o front
         });
     }
 }

@@ -1,12 +1,12 @@
-import nodemailer from 'nodemailer';
-import * as dotenv from 'dotenv';
+import nodemailer from 'nodemailer';//para enviar email
+import * as dotenv from 'dotenv';//para usar variaveis de ambiente
 dotenv.config();
 
 export class EmailController {
     
     static async sendEmail(req, res) {
 
-        const { userEmail, userName, subject, msg } = req.body;
+        const { userEmail, userName, subject, msg } = req.body;//pegando os dados do corpo da requisição
 
         //config
         const smtp = nodemailer.createTransport({
@@ -22,6 +22,7 @@ export class EmailController {
             }
         });
         
+        //config email
         const configEmail = {
             from: "Tester <testernodemailer7@gmail.com>",
             to: "jorge.eduardo@alu.ufc.br",
@@ -29,7 +30,7 @@ export class EmailController {
             html: '<h1> Email: ' + userEmail + '</h1>' + '<h1> Mensagem: ' + msg + '</h1>',
         }
 
-        try {
+        try {//tentando enviar o email
             await smtp.sendMail(configEmail);
             res.send('Email enviado com sucesso');
         } catch (error) {
