@@ -32,10 +32,10 @@ export class EmailController {
 
         try {//tentando enviar o email
             await smtp.sendMail(configEmail);
-            res.send('Email enviado com sucesso');
+            res.status(200).send('Email enviado com sucesso'); //enviando a resposta para o front
         } catch (error) {
             console.log(error);
-            res.send('Erro ao enviar email');
+            res.status(500).send('Erro ao enviar email'); //enviando a resposta para o front
         }
 
     }

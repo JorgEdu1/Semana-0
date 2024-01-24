@@ -22,10 +22,10 @@ export class ShipController {
                 'user-agent': 'Aplicacao teste'
             }
         }).then((response) => {
-            res.send(response.data);//enviando a resposta da api para o front
+            res.status(200).send(response.data);//enviando a resposta para o front
         }
         ).catch((error) => {
-            res.send(error);//enviando o erro para o front
+            res.status(500).send(error);//enviando a resposta para o front
         });
     }
 }
